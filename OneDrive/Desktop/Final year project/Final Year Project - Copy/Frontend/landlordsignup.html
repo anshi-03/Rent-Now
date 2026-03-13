@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RentNow - Landlord Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#FAC638", "background-light": "#f8f8f5", "background-dark": "#231e0f", "surface-light": "#ffffff", "surface-dark": "#2c2b1b"}, fontFamily: {display: "Spline Sans", body: ["Spline Sans", "sans-serif"]}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}}}};</script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FACC15", // Yellow-400 based on the screenshot
+                        primaryHover: "#EAB308", // Yellow-500 for hover
+                        "background-light": "#F9FAFB", // Gray-50
+                        "background-dark": "#111827", // Gray-900
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937",
+                        "text-main-light": "#111827",
+                        "text-main-dark": "#F9FAFB",
+                        "text-sub-light": "#6B7280",
+                        "text-sub-dark": "#9CA3AF",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-body min-h-screen flex flex-col transition-colors duration-200">
+<nav class="w-full bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark py-4 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-12">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-full flex items-center justify-center text-zinc-900">
+<span class="material-symbols-outlined text-xl font-bold">home_work</span>
+</div>
+<span class="text-xl font-bold text-text-main-light dark:text-text-main-dark tracking-tight">RentNow</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-text-main-light dark:text-text-main-dark font-medium hover:text-primary transition" href="#">Find a Tenant</a>
+
+<a class="text-text-main-light dark:text-text-main-dark font-medium hover:text-primary transition" href="landlordlogin.html">Login</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-text-main-light dark:text-text-main-dark hover:text-primary focus:outline-none">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-yellow-200/10 dark:bg-yellow-900/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+<div class="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-200/10 dark:bg-pink-900/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+<div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="hidden lg:block space-y-8 pr-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 text-sm font-medium">
+                
+                </div>
+<h1 class="text-5xl font-extrabold text-text-main-light dark:text-text-main-dark leading-tight">
+                    List your property.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-600">Find reliable tenants.</span>
+</h1>
+
+<div class="grid grid-cols-1 gap-6 mt-8">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<div class="p-2 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-lg">
+<span class="material-icons">verified_user</span>
+</div>
+<div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Verified Tenants</h3>
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark mt-1">We screen every tenant so you can rent with peace of mind.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<div class="p-2 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg">
+<span class="material-icons">payments</span>
+</div>
+<div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Zero Commission</h3>
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark mt-1">Keep 100% of your rental income. No hidden charges.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark py-8 px-6 sm:px-10 rounded-2xl shadow-xl border border-border-light dark:border-border-dark w-full max-w-md mx-auto lg:mx-0">
+<div class="text-center mb-8">
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Create Landlord Account</h2>
+<p class="mt-2 text-sm text-text-sub-light dark:text-text-sub-dark">
+                        Already have an account? 
+                        <a class="font-medium text-primary hover:text-primaryHover hover:underline" href="landlordlogin.html">Log in</a>
+</p>
+</div>
+<form action="#" class="space-y-5" method="POST">
+<div>
+<label class="block text-sm font-medium text-text-main-light dark:text-text-main-dark mb-1" for="name">Full Name</label>
+<div class="relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-sm">person</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-main-light dark:text-text-main-dark mb-1" for="email">Email Address</label>
+<div class="relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-sm">email</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-5">
+<div>
+<label class="block text-sm font-medium text-text-main-light dark:text-text-main-dark mb-1" for="password">Password</label>
+<div class="relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-sm">lock</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-main-light dark:text-text-main-dark mb-1" for="password_confirmation">Confirm Password</label>
+<div class="relative rounded-md shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400 text-sm">lock_outline</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-border-light dark:border-border-dark rounded-lg bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent sm:text-sm" id="password_confirmation" name="password_confirmation" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded cursor-pointer" id="terms" name="terms" required="" type="checkbox"/>
+<label class="ml-2 block text-sm text-text-sub-light dark:text-text-sub-dark" for="terms">
+                            I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>
+</label>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-gray-900 bg-primary hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 transform hover:-translate-y-0.5" type="submit">
+                            Create Account
+                        </button>
+</div>
+<div class="relative mt-6">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-border-light dark:border-border-dark"></div>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-full flex items-center justify-center text-zinc-900">
+<span class="material-symbols-outlined text-xl font-bold">home_work</span>
+</div>
+<span class="text-lg font-bold text-text-main-light dark:text-text-main-dark">RentNow</span>
+<span class="text-sm text-text-sub-light dark:text-text-sub-dark ml-2">© RentNow Inc. All rights reserved.</span>
+</div>
+<div class="flex space-x-6">
+<a class="text-sm text-text-sub-light dark:text-text-sub-dark hover:text-primary transition" href="#">About Us</a>
+<a class="text-sm text-text-sub-light dark:text-text-sub-dark hover:text-primary transition" href="#">Privacy Policy</a>
+<a class="text-sm text-text-sub-light dark:text-text-sub-dark hover:text-primary transition" href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body></html>
